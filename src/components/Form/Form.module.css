@@ -25,27 +25,26 @@ body * {
   /* width: 100%; */
   padding: 10px;
   border-radius: 4px;
-  border: 0.5px solid #152A69;
+  border: 0.5px solid #152a69;
 }
 
+@media screen and (max-width: 700px) {
+  .form {
+    padding: 50px 20px;
+  }
+  .form input {
+    font-size: 16px;
+  }
 
-@media screen and (max-width:700px){
-    .form input {
-        font-size: 16px;
-      }
-
-      .form button {
-        font-size: 16px;
-      }
-
-    
+  .form button {
+    font-size: 16px;
+  }
 }
 
-.form input:focus:not(input[type="checkbox"]){
-    outline: 2px solid  #152A69;
-    border:  0.5px solid transparent;
+.form input:focus:not(input[type="checkbox"]) {
+  outline: 2px solid #152a69;
+  border: 0.5px solid transparent;
 }
-
 
 .form button {
   font-size: 17px;
@@ -54,7 +53,7 @@ body * {
   display: block;
   cursor: pointer;
   border: none;
-  background-color: #152A69;
+  background-color: #152a69;
   color: #ffffff;
   border-radius: 4px;
 }
@@ -93,11 +92,8 @@ input[type="checkbox"] {
   }
 }
 
-
-@media screen and (max-width:700px) {
-    input[type="checkbox"] {
-       
-        transform: scale(1.0);
-    }      
-    
+@media screen and (max-width: 700px) {
+  input[type="checkbox"] {
+    transform: scale(1);
+  }
 }
