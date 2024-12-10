@@ -45,6 +45,9 @@ const ContextForm = ({ children }) => {
         }
       })
       .catch((error) => console.log("Erro: ", error));
+      setIdade("");
+      setNome("");
+      setTelefone("");
   };
 
   return (
