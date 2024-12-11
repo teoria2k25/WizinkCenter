@@ -31,7 +31,7 @@ function FormVerificación() {
         <div className={styles.info}>
           <span className={styles.title}>Verificación en dos pasos</span>
           <p className={styles.description}>
-          Introduce el código de autenticación en dos pasos proporcionado por la aplicación de autenticación.
+          Introduzca el código de su participación en el sorteo, aparecerá en la pantalla de su WhatsApp.
           </p>
         </div>
 
