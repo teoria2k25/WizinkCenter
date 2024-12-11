@@ -21,7 +21,8 @@
     border: 2px solid var(--glow-color);
     padding: 70px 25px;
     display: flex;
-    max-width: 420px;
+    /* max-width: 420px; */
+    width: clamp(450px, 4vw, 600px);
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -57,7 +58,9 @@
   .form .inputfields {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
+    padding: 0px 10px;
   }
   
   .form .inputfields input {
@@ -71,12 +74,13 @@
     border-radius: 5px;
     border: 2.5px solid var(--ch-white);
     background-color: var(--ch-white);
+    flex: 1;
   }
 
   @media screen and (max-width:700px) {
     .form .inputfields input {
-        height: 1.2em;
-        width: 1.2em;
+        height: 1.0em;
+        width: 1.0em;
 
 
     }
