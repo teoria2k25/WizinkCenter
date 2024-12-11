@@ -1,0 +1,155 @@
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* From Uiverse.io by kennyotsu-monochromia */ 
+.form {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    --tomato: #fa5656;
+    font-family: Helvetica, sans-serif;
+    border: 2px solid var(--glow-color);
+    padding: 70px 25px;
+    display: flex;
+    max-width: 420px;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    color: var(--night-rider);
+    background-color: var(--white);
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 2px 5px 11px -1px rgba(204, 204, 204, 0.61);
+  }
+  
+  /*----heading and description-----*/
+  
+  .info {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  /*----input-fields------*/
+  
+  .form .inputfields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .form .inputfields input {
+    height: 2.0em;
+    width: 2.0em;
+    outline: none;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--ch-black);
+    border-radius: 5px;
+    border: 2.5px solid var(--ch-white);
+    background-color: var(--ch-white);
+  }
+
+  @media screen and (max-width:700px) {
+    .form .inputfields input {
+        height: 1.4em;
+        width: 1.4em;
+
+
+    }
+    
+  }
+  
+  
+  /*-----verify and clear buttons-----*/
+  
+  .actionbtns {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px !important;
+    /* border: 1px solid; */
+    width: 100%;
+  }
+  
+  .verify {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    text-shadow: none;
+    background-color: #152a69;
+    box-shadow: transparent;
+    border: none;
+    transition: 0.5s ease;
+    user-select: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    
+  }
+
+  
+  .clear {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--night-rider);
+    text-shadow: none;
+    background: transparent;
+    border: 1px solid var(--night-rider);
+    transition: 0.5s ease;
+    user-select: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  /*-----close button------*/
+  
+  .close {
+    /* position: absolute; */
+    right: 10px;
+    top: 10px;
+    background-color: var(--ch-white);
+    color: var(--af-white);
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease;
+  }
+  
+  .close:hover {
+    background-color: var(--tomato);
+    color: var(--white);
+  }

