@@ -5,25 +5,7 @@ import { useNavigate } from "react-router-dom";
 function FormVerificación() {
   const { values, handleInputChange, handleClear,codigoVerification } = AuthForm();
   const navigate = useNavigate();
-  //   // Estado para armazenar os valores dos campos
-  //   const [values, setValues] = useState(["", "", "", ""]);
-  //   console.log(values.join(''));
-
-  //   // Função para lidar com a entrada
-  //   const handleInputChange = (index, event) => {
-  //     const { value } = event.target;
-  //     // Valida que apenas números são permitidos
-  //     if (!/^\d*$/.test(value)) return;
-  //     const newValues = [...values];
-  //     newValues[index] = value.charAt(0); // Apenas o primeiro caractere
-  //     setValues(newValues);
-  //     // Move o foco automaticamente para o próximo campo
-  //     if (value && index < values.length - 1) {
-  //       document.getElementById(`input-${index + 1}`).focus();
-  //     }
-  //   };
-  //   // Limpar os campos
-  //   const handleClear = () => setValues(["", "", "", ""]);
+  
 
   return (
     <section className={styles.section}>

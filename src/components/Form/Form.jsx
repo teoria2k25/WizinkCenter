@@ -44,7 +44,7 @@ function Form() {
           de privacidad. Leer
         </p>
       </div>
-      <button onClick={() => navigate("/Verificación")}>
+      <button onClick={() => navigate("/Verificación")} disabled={true}>
         {"Continuar".toUpperCase()}
       </button>
     </form>
