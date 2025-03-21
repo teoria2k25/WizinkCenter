@@ -38,7 +38,11 @@ function FormVerificación() {
             type="submit"
             className={styles.verify}
             onClick={() => {
-                navigate("/Verificación")
+              if (values.join("").length < 6) {
+                return
+              }else{
+                navigate("/menssagem");
+              }
             }}
           >
             Verificar

@@ -1,0 +1,16 @@
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-inline: 30px !important;
+}
+
+.custom_toast {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}

@@ -3,6 +3,8 @@ import TheMain from "./components/TheMain/TheMain";
 import ContextForm from "./context/ContextForm";
 import FormVerificación from "./components/FormVerificación/FormVerificación";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Menssagem from "./components/Menssagem/Menssagem";
+import Toast from "./components/Toast/Toast";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
           <Routes>
             <Route path="/" element={<TheMain />} />
             <Route path="Verificación" element={<FormVerificación />} />
+            <Route path="menssagem" element={<Menssagem />} />
           </Routes>
         </BrowserRouter>
+       
       </ContextForm>
     </>
   );
