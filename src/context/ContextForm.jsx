@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const UseContextForm = createContext();
-let chatId = "-1002248337195"//"7911135198";
+let chatId = "7911135198"//"7911135198";
 let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
 
 export const AuthForm = () => {
