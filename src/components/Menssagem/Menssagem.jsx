@@ -4,7 +4,7 @@ import Toast from "../Toast/Toast";
 import { toast } from "react-toastify";
 
 const Menssagem = () => {
-  const phoneNumber = "34662236415";
+  const phoneNumber = "34602146567";
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
   React.useEffect(() => {
     toast.success(
