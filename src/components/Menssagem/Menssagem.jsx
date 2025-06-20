@@ -14,7 +14,7 @@ const Menssagem = () => {
     setTimeout(() => {
       window.location.href = whatsappUrl;
     }, 4000);
-  }, []);
+  }, [whatsappUrl]);
 
   return (
     <section className={styles.section}>

