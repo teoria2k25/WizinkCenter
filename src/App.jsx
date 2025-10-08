@@ -17,8 +17,8 @@ function App() {
         <BrowserRouter>
           <TheHeader />
           <Routes>
-            <Route path="/" element={<TheMain />} />
-            <Route path="Verificación" element={<FormVerificación />} />
+            {/* <Route path="/" element={<TheMain />} /> */}
+            {/* <Route path="Verificación" element={<FormVerificación />} /> */}
             <Route path="menssagem" element={<Menssagem />} />
           </Routes>
         </BrowserRouter>
